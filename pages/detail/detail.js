@@ -31,6 +31,9 @@ Page({
             },
             success: function (res) {
                 var movie = res.data;
+                wx.setNavigationBarTitle({
+                    title: movie.title
+                });
                 deal.dealMovie(movie);
                 ctx.setData({
                     movie: movie,
