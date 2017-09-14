@@ -1,4 +1,4 @@
-![](https://github.com/iota9star/ACG.RIP/blob/master/app/src/main/res/mipmap-xxxhdpi/app_icon.png?raw=true)
+![](https://img3.doubanio.com/f/frodo/144e6fb7d96701944e7dbb1a9bad51bdb1debe29/pics/app/logo.png)
 
 # 豆瓣电影
 
