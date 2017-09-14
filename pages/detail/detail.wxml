@@ -1,0 +1,43 @@
+<view class="content">
+    <view class="movie-detail-container">
+        <view class="title">
+            <text>{{"简\n介"}}</text>
+        </view>
+        <scroll-view scroll-x="true" class="movie-detail-scroll-container">
+            <view class="movie-detail">
+                <view class="movie-detail-cover">
+                    <image src="{{movie.images.large}}" mode="scaleToFill"/>
+                </view>
+                <view class="rating">
+                    <text>{{movie.score}}</text>
+                </view>
+                <view class="movie-detail-info">
+                    <text>{{movie.info}}</text>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="movie-detail-casts-container">
+        <view class="title">
+            <text>{{"演\n员"}}</text>
+        </view>
+        <scroll-view scroll-x="true" class="movie-detail-casts-scroll-container">
+            <view class="movie-detail-casts">
+                <block wx:for="{{movie.casts}}" wx:key="item">
+                    <image src="{{item.avatars.large}}" mode="scaleToFill"/>
+                </block>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="movie-detail-summary">
+        <view class="title">
+            <text>{{"详\n情"}}</text>
+        </view>
+        <view class="summary">
+            <text>{{" " + movie.summary}}</text>
+        </view>
+    </view>
+</view>
+<loading hidden="{{hidden}}" bindchange="loadingChange">
+    努力加载中
+</loading>

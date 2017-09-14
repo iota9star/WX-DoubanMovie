@@ -1,0 +1,19 @@
+<template name="movies">
+    <block wx:for="{{movies}}" wx:key="item">
+        <view class="movie-scroll-container" hover-class="movie-scroll-container-hover" bindtap="detail"
+              id="{{item.id}}">
+            <view class="movie">
+                <view class="cover">
+                    <image src="{{item.images.large}}" mode="scaleToFill"/>
+                </view>
+                <view class="rating">
+                    <text>{{item.score}}</text>
+                </view>
+                <view class="movie-info">
+                    <text>{{item.info}}</text>
+                </view>
+                <view class="placeholder"/>
+            </view>
+        </view>
+    </block>
+</template>

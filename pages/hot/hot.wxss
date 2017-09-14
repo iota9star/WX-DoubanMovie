@@ -1,0 +1,23 @@
+
+.weather {
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  padding: 8px;
+}
+
+.weather-icon {
+  width: 40%;
+}
+
+.weather-icon image {
+  width: 42px;
+  height: 30px;
+  margin-top: 12px;
+}
+
+.weather-info {
+  font-size: 12px;
+  text-align: end;
+  width: 60%;
+}

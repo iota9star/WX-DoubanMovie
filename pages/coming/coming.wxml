@@ -1,0 +1,9 @@
+<view class="content">
+    <view class="content-list">
+        <import src="../template/item_movie"/>
+        <template is="movies" data="{{movies}}"/>
+    </view>
+</view>
+<loading hidden="{{hidden}}" bindchange="loadingChange">
+    努力加载中...
+</loading>

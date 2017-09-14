@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/hot/hot",
+    "pages/coming/coming",
+    "pages/search/search",
+    "pages/detail/detail"
+  ],
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#41be58",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/hot/hot",
+        "iconPath": "assets/img/local.png",
+        "selectedIconPath": "assets/img/localselected.png",
+        "text": "本地热映"
+      },
+      {
+        "pagePath": "pages/coming/coming",
+        "iconPath": "assets/img/coming.png",
+        "selectedIconPath": "assets/img/comingselected.png",
+        "text": "即将上映"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "assets/img/search.png",
+        "selectedIconPath": "assets/img/searchselected.png",
+        "text": "电影查询"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#41be58",
+    "navigationBarTitleText": "豆瓣电影",
+    "navigationBarTextStyle": "white"
+  }
+}

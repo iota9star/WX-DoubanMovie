@@ -1,0 +1,37 @@
+.search {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  background-color: #41be58;
+}
+
+.search button {
+  height: 32px;
+  width: 20%;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 0 4px 4px 0;
+}
+
+.search .input {
+  width: 80%;
+  font-size: 14px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  height: 32px;
+  padding: 0 8px;
+  line-height: 32px;
+}
+
+.hint {
+  font-size: 14px;
+  background-color: #fff;
+  padding: 8px;
+}
+
+.btnClick {
+  background-color: orangered;
+}
