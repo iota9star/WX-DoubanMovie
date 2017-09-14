@@ -12,7 +12,7 @@
             <swiper-item>
                 <view class="banner-item">
                     <block wx:for="{{banners[index]}}" wx:for-item="item" wx:key="item">
-                        <image src="{{item}}" mode="scaleToFill"/>
+                        <image src="{{item.cover}}" mode="aspectFill" bindtap="detail" id="{{item.id}}"/>
                     </block>
                 </view>
             </swiper-item>

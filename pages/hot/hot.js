@@ -156,7 +156,10 @@ Page({
                         var covers = [];
                         var banners = [];
                         newMovies.forEach(function (movie) {
-                            covers.push(movie.images.large);
+                            var cover = {};
+                            cover.cover = movie.images.large;
+                            cover.id = movie.id;
+                            covers.push(cover);
                         });
                         for (var i = 0, len = covers.length; i < len; i += 4) {
                             banners.push(covers.slice(i, i + 4));
