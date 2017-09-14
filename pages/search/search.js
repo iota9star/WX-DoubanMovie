@@ -6,6 +6,7 @@ Page({
         keywords: "",
         movies: [],
         page: 1,
+        count: 16,
         hidden: true,
         modalHidden: true
     },
@@ -82,7 +83,7 @@ Page({
         var keywords = ctx.data.keywords;
         var url = ctx.data.url;
         var page = ctx.data.page;
-        var count = 20;
+        var count = ctx.data.count;
         var start = (page - 1) * count;
         wx.request({
             url: url,
@@ -95,6 +96,9 @@ Page({
                 'Content-Type': 'json'
             },
             success: function (res) {
+                wx.setNavigationBarTitle({
+                    title: res.data.title
+                });
                 var newMovies = res.data.subjects;
                 var length = newMovies.length;
                 if (length === 0) {

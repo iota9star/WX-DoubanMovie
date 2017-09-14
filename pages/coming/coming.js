@@ -7,6 +7,7 @@ Page({
     data: {
         url: "https://api.douban.com/v2/movie/coming_soon",
         page: 1,
+        count: 16,
         movies: [],
         hidden: false
     },
@@ -75,7 +76,7 @@ Page({
         var page = ctx.data.page;
         var url = ctx.data.url;
         var location = ctx.data.location;
-        var count = 20;
+        var count = ctx.data.count;
         var start = (page - 1) * count;
         wx.request({
             url: url,
@@ -88,6 +89,9 @@ Page({
                 count: count
             },
             success: function (res) {
+                wx.setNavigationBarTitle({
+                    title: res.data.title
+                });
                 var newMovies = res.data.subjects;
                 var length = newMovies.length;
                 if (length === 0) {
