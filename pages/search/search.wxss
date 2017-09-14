@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   padding: 8px;
-  background-color: #06c012;
+  background-color: #00bf73;
 }
 
 .search button {

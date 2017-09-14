@@ -57,7 +57,7 @@
   font-weight: bold;
   padding: 4px;
   color: #ffffff;
-  background-color: #06c012;
+  background-color: #00bf73;
 }
 
 .movie-detail-casts-container .title {

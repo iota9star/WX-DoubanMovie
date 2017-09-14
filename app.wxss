@@ -44,7 +44,7 @@
   margin-left: 8px;
   color: #ffffff;
   text-align: center;
-  background-color: #06c012;
+  background-color: #00bf73;
 }
 
 .cover image {
