@@ -7,7 +7,7 @@ Page({
     data: {
         url: "https://api.douban.com/v2/movie/coming_soon",
         page: 1,
-        count: 16,
+        count: 20,
         movies: [],
         hidden: false
     },

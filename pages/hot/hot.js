@@ -9,24 +9,22 @@ Page({
         url: "https://api.douban.com/v2/movie/in_theaters",
         banners: [],
         page: 1,
-        count: 16,
+        count: 20,
         indicatorDots: true,
         indicatorColor: '#ffffff',
         indicatorActiveColor: '#06c012',
         autoPlay: true,
         circular: true,
+        vertical: false,
         interval: 3000,
         duration: 1000,
         movies: [],
         weather: {
-            date: '加载天气中',
-            temperature: '',
-            weatherDesc: '',
+            weatherInfo: '加载天气中',
             weatherIcon: ''
         },
         location: '成都',
-        hidden: false,
-        vertical: true
+        hidden: false
     },
 
     /**
@@ -113,11 +111,10 @@ Page({
                 var temperature = currentWeather.temperature;
                 var weatherDesc = currentWeather.weather;
                 var weatherIcon = currentWeather.dayPictureUrl;
+                var weatherInfo = date + ' / ' + temperature + ' / ' + weatherDesc;
                 ctx.setData({
                     weather: {
-                        date: date,
-                        temperature: temperature,
-                        weatherDesc: weatherDesc,
+                        weatherInfo: weatherInfo,
                         weatherIcon: weatherIcon
                     }
                 });
@@ -155,12 +152,17 @@ Page({
                         duration: 2000
                     });
                 } else {
-                    var banners = [];
-                    var size = length > 5 ? 5 : length;
-                    for (var i = 0; i < size; i++) {
-                        banners.push(newMovies[i].images.large);
+                    if (page === 1) {
+                        var covers = [];
+                        var banners = [];
+                        newMovies.forEach(function (movie) {
+                            covers.push(movie.images.large);
+                        });
+                        for (var i = 0, len = covers.length; i < len; i += 4) {
+                            banners.push(covers.slice(i, i + 4));
+                        }
+                        ctx.setData({banners: banners});
                     }
-                    ctx.setData({banners: banners});
                 }
                 deal.dealMovies(newMovies);
                 var movies = ctx.data.movies;

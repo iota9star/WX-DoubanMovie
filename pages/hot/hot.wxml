@@ -1,24 +1,26 @@
 <view class="content">
-    <view class="banner">
-        <swiper class="banner-images"
-                indicator-color="{{indicatorColor}}"
-                indicator-active-color="{{indicatorActiveColor}}"
-                indicator-dots="{{indicatorDots}}"
-                autoplay="{{autoPlay}}"
-                interval="{{interval}}"
-                duration="{{duration}}"
-                circular="{{circular}}"
-                vertical="{{vertical}}">
-            <block wx:for="{{banners}}" wx:key="item">
-                <swiper-item>
-                    <image src="{{item}}" style="width:100%" mode="aspectFill"/>
-                </swiper-item>
-            </block>
-        </swiper>
-        <view class="weather">
-            <image src="{{weather.weatherIcon}}"/>
-            <text>{{weather.date+'\n'+weather.temperature+'\n'+weather.weatherDesc}}</text>
-        </view>
+    <swiper class="banner"
+            indicator-color="{{indicatorColor}}"
+            indicator-active-color="{{indicatorActiveColor}}"
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoPlay}}"
+            interval="{{interval}}"
+            duration="{{duration}}"
+            circular="{{circular}}"
+            vertical="{{vertical}}">
+        <block wx:for="{{banners}}" wx:for-index="index" wx:key="group">
+            <swiper-item>
+                <view class="banner-item">
+                    <block wx:for="{{banners[index]}}" wx:for-item="item" wx:key="item">
+                        <image src="{{item}}" mode="scaleToFill"/>
+                    </block>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="weather">
+        <image src="{{weather.weatherIcon}}"/>
+        <text>{{weather.weatherInfo}}</text>
     </view>
     <view class="content-list">
         <import src="../template/item_movie"/>

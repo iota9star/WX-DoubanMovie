@@ -6,7 +6,7 @@ Page({
         keywords: "",
         movies: [],
         page: 1,
-        count: 16,
+        count: 20,
         hidden: true,
         modalHidden: true
     },
