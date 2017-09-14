@@ -1,7 +1,7 @@
 <view class="content">
     <view class="search">
         <input class="input" bindinput="bindKeyInput"/>
-        <button bindtap="search" hover-class="btnClick">查询</button>
+        <button bindtap="search">查询</button>
     </view>
     <view class="hint">
         <text>你要搜索：{{keywords}}</text>

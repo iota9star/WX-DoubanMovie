@@ -7,7 +7,7 @@
   ],
   "tabBar": {
     "color": "#dddddd",
-    "selectedColor": "#41be58",
+    "selectedColor": "#06c012",
     "backgroundColor": "#ffffff",
     "list": [
       {
@@ -32,7 +32,7 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#41be58",
+    "navigationBarBackgroundColor": "#06c012",
     "navigationBarTitleText": "豆瓣电影",
     "navigationBarTextStyle": "white"
   }

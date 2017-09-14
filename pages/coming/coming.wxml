@@ -5,5 +5,5 @@
     </view>
 </view>
 <loading hidden="{{hidden}}" bindchange="loadingChange">
-    努力加载中...
+    努力加载中
 </loading>

@@ -10,12 +10,15 @@ Page({
         banners: [],
         page: 1,
         indicatorDots: true,
+        indicatorColor: '#ffffff',
+        indicatorActiveColor: '#06c012',
         autoPlay: true,
+        circular: true,
         interval: 3000,
-        duration: 1200,
+        duration: 1000,
         movies: [],
         weather: {
-            date: '加载天气中...',
+            date: '加载天气中',
             temperature: '',
             weatherDesc: '',
             weatherIcon: ''
